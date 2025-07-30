@@ -1,66 +1,113 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
 
- :root {
-    --font1: "Young Serif", serif;
-    --font2: "Outfit", sans-serif;
-    --text-color: #5f574e;
-    --title-color: #854632ff
- }
+:root {
+  --font-heading: 'Young Serif', serif;
+  --font-body: 'Outfit', sans-serif;
 
- * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
- }
+  --clr-dark: #312e2c;
+  --clr-medium: #5f574e;
+  --clr-light-bg: #fff5fa;
+  --clr-pink: #7b284f;
+  --clr-border: #e4ded8;
+}
 
- body {
-    font-family: var(--font2);
- }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
- .recipe {
-    min-height: 100vh;
-    max-width: 380px;
-    margin: 0 auto;
- }
-
- .recipe-image img {
-    width: 100%;
- }
-
- .recipe-content {
-    padding: 2em;
- }
-
- .intro h1 {
-    color: #302d2cff;
-    font-family: var(--font1);
-    font-size: 1.7em;
-    font-weight: 400;
-    margin-bottom: 1em;
- }
-
-.intro p {
-  font-family:var(--font2);
+body {
+  background: #fff;
+  font-family: var(--font-body);
   font-size: 1em;
-  font-weight: 400;
+  color: var(--clr-medium);
   line-height: 1.6;
-  color: var(--text-color);
-  margin-bottom: 1.5em;
+}
+
+.recipe {
+  max-width: 740px;
+  background: white;
+  margin: 0 auto;
+}
+
+.recipe-image img {
+  width: 100%;
+  display: block;
+}
+
+.recipe-intro {
+  padding: 2em;
+}
+
+.recipe-intro h1 {
+  font-family: var(--font-heading);
+  color: var(--clr-dark);
+  font-size: 2.2em;
+  margin-bottom: 0.5em;
 }
 
 .recipe-prep-time {
-   background-color: #fff5fa;
-   padding: 1.5em;
-   border-radius: 10px;
+  background: var(--clr-light-bg);
+  margin: 0 2em;
+  padding: 1.5em;
+  border-radius: 10px;
 }
 
 .recipe-prep-time h3 {
-   color: #7b284fff;
-   font-weight: 700;
-   font-size: 1.2em;
-   margin-bottom: 1em;
+  color: var(--clr-pink);
+  font-size: 1.1em;
+  margin-bottom: 1em;
 }
 
 .recipe-prep-time ul {
-   
+  padding-left: 1em;
+}
+
+.recipe-prep-time li {
+  margin-bottom: 0.6em;
+}
+
+.recipe-section {
+  padding: 2em;
+  border-bottom: 1px solid var(--clr-border);
+}
+
+.recipe-section:last-child {
+  border-bottom: none;
+}
+
+.recipe-section h2 {
+  font-family: var(--font-heading);
+  color: var(--clr-pink);
+  margin-bottom: 1em;
+}
+
+.recipe-section ul,
+.recipe-section ol {
+  padding-left: 1.2em;
+}
+
+.recipe-section ol li {
+  margin-bottom: 0.8em;
+}
+
+.recipe-section p {
+  margin-bottom: 1em;
+}
+
+.nutrition {
+  list-style: none;
+  padding: 0;
+}
+
+.nutrition li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8em 0;
+  border-bottom: 1px solid var(--clr-border);
+}
+
+.nutrition li:last-child {
+  border-bottom: none;
 }
